@@ -1,0 +1,6 @@
+/.aws
+/awsCLIAutomationScript.sh
+/src/cachetools
+/src/cachetools-5.5.0.dist-info
+/src/redis
+/src/redis-5.0.8.dist-info
