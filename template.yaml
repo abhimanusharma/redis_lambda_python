@@ -7,7 +7,7 @@ Resources:
   RedisPythonLambdaFunction:
     Type: AWS::Serverless::Function
     Properties:
-      codeUri: src/
+      CodeUri: src/
       Handler: lambda_function.lambda_handler
       Runtime: pthon3.8
       Events: 
