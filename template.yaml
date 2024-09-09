@@ -3,7 +3,7 @@ Transform: AWS::Serverless-2016-10-31
 Description: A sample SAM template for deploying Lambda functions.
 
 Resources:
-# Details about the myDateTimeFunction Lambda function
+# Details about the RedisPythonLambdaFunction Lambda function
   RedisPythonLambdaFunction:
     Type: AWS::Serverless::Function
     Properties:
@@ -12,9 +12,9 @@ Resources:
       Runtime: python3.8
       Events: 
         MyRedisEvent:
-          Type: Redis
+          Type: AWS::ElastiCache::CacheCluster
           Properties:
-            Description: "Redis event source for myDateTimeFunction"
+            Description: "Redis event source for RedisPythonLambdaFunction"
             Endpoints:
               - Fn::GetAtt: [ RedisCluster, RedisEndpointAddress ]
             Port: 6379
